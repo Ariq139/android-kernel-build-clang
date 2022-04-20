@@ -5,14 +5,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script: git submodule update --init --remote
+  displayName: 'Submodule update'
 - checkout: self
   submodules: true
   displayName: 'Checkout Sources and Tools'
   persistCredentials: true
 - script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip
   displayName: 'Prepare Build Environment'
-- script: git submodule update --init --remote
-  displayName: 'Submodule update'
 - script: bash build.sh --clean
   displayName: 'Clean WorkDir'
 - script: bash build.sh --kernel

@@ -11,6 +11,8 @@ steps:
   persistCredentials: true
 - script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip
   displayName: 'Prepare Build Environment'
+- script: git submodule update --init --remote
+  displayName: 'Submodule update'
 - script: bash build.sh --clean
   displayName: 'Clean WorkDir'
 - script: bash build.sh --kernel

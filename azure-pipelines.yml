@@ -6,10 +6,9 @@ pool:
 
 steps:
 - checkout: self
-  displayName: 'Checkout Sources'
+  submodules: true
+  displayName: 'Checkout Sources and Tools'
   persistCredentials: true
-- script: git submodule update --init --remote
-  displayName: 'Submodule update'
 - script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip
   displayName: 'Prepare Build Environment'
 - script: bash build.sh --clean

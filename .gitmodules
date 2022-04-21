@@ -8,7 +8,7 @@
 	url = https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86
 [submodule "kernel_source"]
 	path = kernel_source
-	branch = master
+	branch = main
 	url = https://github.com/Ariq139/kernel-SOV37-52.0.C.5.295.git
 [submodule "tools/prebuilts"]
 	path = tools/prebuilts

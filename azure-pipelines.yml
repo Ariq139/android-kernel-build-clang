@@ -17,6 +17,8 @@ steps:
   displayName: 'Build Kernel'
 - script: bash build.sh --dtbo
   displayName: 'Build DTBO'
+- script: bash build.sh --boot_img
+  displayName: 'Build BOOT'
 - script: bash build.sh --zip
   displayName: 'Build Zip'
 - publish: $(System.DefaultWorkingDirectory)/build/

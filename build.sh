@@ -128,7 +128,7 @@ cp $KERNEL_SOURCE_DIR/out/arch/arm64/boot/dtbo.img $FLASH_ZIP_DIR/dtbo.img
 
 #create flashable zip
 cd $FLASH_ZIP_DIR
-zip $TARGET_IMAGES_DIR/realme-x2pro-kernel-$(date +"%Y%m%d_%H%M%S").zip -r ./
+zip $TARGET_IMAGES_DIR/sov37-kernel-$(date +"%Y%m%d_%H%M%S").zip -r ./
 
 }
 

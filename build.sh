@@ -95,6 +95,7 @@ mkdir -p $TARGET_IMAGES_DIR
 
 #copy new boot img to target dir
 cp image-new.img $TARGET_IMAGES_DIR/boot.img
+cp $KERNEL_SOURCE_DIR/out/arch/arm64/boot/Image-dtb $TARGET_IMAGES_DIR/Image-dtb
 
 }
 

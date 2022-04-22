@@ -21,9 +21,7 @@ export CLANG_VERSION=clang-4691093
 export PATH=$TOOLCHAIN_DIR/bin/:$CLANG_DIR/$CLANG_VERSION/bin:$MKDTBOIMG_DIR:$AIK_DIR:$PATH
 export CROSS_COMPILE=$TOOLCHAIN_DIR/bin/aarch64-linux-android-
 export LD_LIBRARY_PATH=$TOOLCHAIN_DIR/aarch64-linux-gnu/lib64
-export OPPO_TARGET_DEVICE=MSM_19781
-export TARGET_PRODUCT=msmnile
-export DEFCONFIG=sdm845_defconfig
+export DEFCONFIG=sdm845-perf_defconfig
 #export DEFCONFIG=defconfig
 export DTC_EXT=$DTC_DIR/dtc
 
@@ -95,6 +93,7 @@ mkdir -p $TARGET_IMAGES_DIR
 
 #copy new boot img to target dir
 cp image-new.img $TARGET_IMAGES_DIR/boot.img
+cp $KERNEL_SOURCE_DIR/out/arch/arm64/boot/Image-dtb $TARGET_IMAGES_DIR/Image-dtb
 
 }
 

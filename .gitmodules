@@ -1,16 +1,16 @@
 [submodule "tools/toolchain"]
 	path = tools/toolchain
-	branch = android-9.0.0_r53
+	branch = android-10.0.0_r45
 	url = https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
 [submodule "tools/clang-linux-x86"]
 	path = tools/clang-linux-x86
-	branch = android-9.0.0_r53
+	branch = android-10.0.0_r45
 	url = https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86
 [submodule "kernel_source"]
 	path = kernel_source
 	branch = main
-	url = https://github.com/Ariq139/kernel-SOV37-52.0.C.5.295.git
+	url = https://github.com/Ariq139/kernel_SOV37_52.1.C.0.157.git
 [submodule "tools/prebuilts"]
 	path = tools/prebuilts
-	branch = android-9.0.0_r53
+	branch = android-10.0.0_r45
 	url = https://android.googlesource.com/platform/prebuilts/misc/

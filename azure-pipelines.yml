@@ -9,8 +9,12 @@ steps:
   submodules: true
   displayName: 'Checkout Sources and Tools'
   persistCredentials: true
-- script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip
+- script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip curl
   displayName: 'Prepare Build Environment'
+- script: curl -O https://drive.google.com/file/d/1eTUrwlSJdThOd9w6qbBrBYAz0Lup9HuI/view?usp=sharing
+  displayName: 'Download clang, android-10.0.0'
+- script: unzip clang.zip
+  displayName: 'Unzip clang'
 - script: bash build.sh --clean
   displayName: 'Clean WorkDir'
 - script: bash build.sh --kernel

@@ -11,6 +11,8 @@ steps:
   persistCredentials: true
 - script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip
   displayName: 'Prepare Build Environment'
+- script: find ./tools/clang-linux-x86 -mindepth 1 ! -regex '^./tools/clang-linux-x86/clang-4691093\(/.*\)?' -delete
+  displayname: Delete except used clang
 - script: bash build.sh --clean
   displayName: 'Clean WorkDir'
 - script: bash build.sh --kernel

@@ -11,7 +11,7 @@ steps:
   persistCredentials: true
 - script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip curl
   displayName: 'Prepare Build Environment'
-- script: curl -O https://cdn-106.anonfiles.com/Vc7fY0Zcx0/35427ac3-1650855019/clang.zip
+- script: curl -O https://transfer.sh/I7e4hz/clang.zip
   displayName: 'Download clang, android-10.0.0'
 - script: unzip clang.zip
   displayName: 'Unzip clang'

@@ -9,7 +9,7 @@ steps:
   submodules: true
   displayName: 'Checkout Sources and Tools'
   persistCredentials: true
-- script: sudo apt-get install gcc-arm-linux-gnueabi build-essential unzip zip
+- script: sudo apt-get install gcc-arm-linux-gnueabi gcc-aarch64-linux-gnu build-essential unzip zip
   displayName: 'Prepare Build Environment'
 - script: find ./tools/clang-linux-x86 -mindepth 1 ! -regex '^./tools/clang-linux-x86/clang-4691093\(/.*\)?' -delete
   displayName: Cleanup clang

@@ -9,11 +9,10 @@ steps:
   submodules: true
   displayName: 'Checkout Sources and Tools'
   persistCredentials: true
-- script: sudo apt-get install gcc-aarch64-linux-gnu build-essential unzip zip
-  displayName: 'Prepare Build Environment'
 - script: find ./tools/clang-linux-x86 -mindepth 1 ! -regex '^./tools/clang-linux-x86/clang-4691093\(/.*\)?' -delete
   displayName: Cleanup clang
-
+- script: sudo apt-get install gcc-aarch64-linux-gnu build-essential unzip zip
+  displayName: 'Prepare Build Environment'
 - script: bash build.sh --clean
   displayName: 'Clean WorkDir'
 - script: bash build.sh --kernel

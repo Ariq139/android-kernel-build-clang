@@ -72,7 +72,8 @@ build() {
 
 #build kernel
 cd $KERNEL_SOURCE_DIR
-make -j$(nproc --all) O=out CC=clang CLANG_TRIPLE=aarch64-linux-gnu-
+#make -j$(nproc --all) O=out CC=clang CLANG_TRIPLE=aarch64-linux-gnu-
+make -j$(nproc) O=out 2>&1 | tee kernel.log
 
 }
 
